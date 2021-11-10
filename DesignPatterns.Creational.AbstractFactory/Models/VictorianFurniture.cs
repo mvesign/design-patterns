@@ -1,4 +1,4 @@
-﻿using DesignPatterns.Creational.AbstractFactory.Interfaces;
+﻿using DesignPatterns.Creational.AbstractFactory.Abstractions;
 
 namespace DesignPatterns.Creational.AbstractFactory.Models
 {

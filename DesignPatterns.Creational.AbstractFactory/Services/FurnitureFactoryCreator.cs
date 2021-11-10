@@ -1,5 +1,5 @@
 ﻿using System;
-using DesignPatterns.Creational.AbstractFactory.Interfaces;
+using DesignPatterns.Creational.AbstractFactory.Abstractions;
 using DesignPatterns.Creational.AbstractFactory.Models;
 
 namespace DesignPatterns.Creational.AbstractFactory.Services

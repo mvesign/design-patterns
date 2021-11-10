@@ -1,6 +1,6 @@
 ﻿using DesignPatterns.Creational.AbstractFactory.Models;
 
-namespace DesignPatterns.Creational.AbstractFactory.Interfaces
+namespace DesignPatterns.Creational.AbstractFactory.Abstractions
 {
     /// <summary>
     /// Piece of furniture.
