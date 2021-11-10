@@ -1,8 +1,8 @@
 ﻿using System;
-using DesignPatterns.AbstractFactory.Models;
-using DesignPatterns.AbstractFactory.Services;
+using DesignPatterns.Creational.AbstractFactory.Models;
+using DesignPatterns.Creational.AbstractFactory.Services;
 
-namespace DesignPatterns.AbstractFactory
+namespace DesignPatterns.Creational.AbstractFactory
 {
     internal class Program
     {

@@ -1,4 +1,4 @@
-﻿namespace DesignPatterns.AbstractFactory.Models
+﻿namespace DesignPatterns.Creational.AbstractFactory.Models
 {
     /// <summary>
     /// Type of furniture.

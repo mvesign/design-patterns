@@ -1,7 +1,7 @@
-﻿using DesignPatterns.AbstractFactory.Interfaces;
-using DesignPatterns.AbstractFactory.Models;
+﻿using DesignPatterns.Creational.AbstractFactory.Interfaces;
+using DesignPatterns.Creational.AbstractFactory.Models;
 
-namespace DesignPatterns.AbstractFactory.Services
+namespace DesignPatterns.Creational.AbstractFactory.Services
 {
     /// <inheritdoc />
     public class ModernFurnitureFactory : IFurnitureFactory

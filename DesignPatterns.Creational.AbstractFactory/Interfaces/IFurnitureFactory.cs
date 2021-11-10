@@ -1,4 +1,4 @@
-﻿namespace DesignPatterns.AbstractFactory.Interfaces
+﻿namespace DesignPatterns.Creational.AbstractFactory.Interfaces
 {
     /// <summary>
     /// Factory that can create different types of furniture.

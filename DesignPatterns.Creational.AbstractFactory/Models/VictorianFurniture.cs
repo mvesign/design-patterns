@@ -1,32 +1,32 @@
-﻿using DesignPatterns.AbstractFactory.Interfaces;
+﻿using DesignPatterns.Creational.AbstractFactory.Interfaces;
 
-namespace DesignPatterns.AbstractFactory.Models
+namespace DesignPatterns.Creational.AbstractFactory.Models
 {
     /// <inheritdoc />
-    public class ModernChair : IChair
+    public class VictorianChair : IChair
     {
         /// <inheritdoc />
-        public FurnitureStyle GetFurnitureStyle() => FurnitureStyle.Modern;
+        public FurnitureStyle GetFurnitureStyle() => FurnitureStyle.Victorian;
 
         /// <inheritdoc />
         public FurnitureType GetFurnitureType() => FurnitureType.Chair;
     }
 
     /// <inheritdoc />
-    public class ModernCoffeeTable : ICoffeeTable
+    public class VictorianCoffeeTable : ICoffeeTable
     {
         /// <inheritdoc />
-        public FurnitureStyle GetFurnitureStyle() => FurnitureStyle.Modern;
+        public FurnitureStyle GetFurnitureStyle() => FurnitureStyle.Victorian;
 
         /// <inheritdoc />
         public FurnitureType GetFurnitureType() => FurnitureType.CoffeeTable;
     }
 
     /// <inheritdoc />
-    public class ModernSofa : ISofa
+    public class VictorianSofa : ISofa
     {
         /// <inheritdoc />
-        public FurnitureStyle GetFurnitureStyle() => FurnitureStyle.Modern;
+        public FurnitureStyle GetFurnitureStyle() => FurnitureStyle.Victorian;
 
         /// <inheritdoc />
         public FurnitureType GetFurnitureType() => FurnitureType.Sofa;

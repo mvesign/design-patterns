@@ -1,8 +1,8 @@
 ﻿using System;
-using DesignPatterns.AbstractFactory.Interfaces;
-using DesignPatterns.AbstractFactory.Models;
+using DesignPatterns.Creational.AbstractFactory.Interfaces;
+using DesignPatterns.Creational.AbstractFactory.Models;
 
-namespace DesignPatterns.AbstractFactory.Services
+namespace DesignPatterns.Creational.AbstractFactory.Services
 {
     /// <summary>
     /// Service that can create any type of <see cref="IFurnitureFactory"/>.
