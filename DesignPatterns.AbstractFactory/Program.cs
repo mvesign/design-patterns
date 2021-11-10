@@ -8,7 +8,7 @@ namespace DesignPatterns.AbstractFactory
     {
         private static void Main()
         {
-            foreach (var type in Enum.GetValues<FurnitureType>())
+            foreach (var type in Enum.GetValues<FurnitureStyle>())
                 type.CreateFurnitureFactory().ProduceFurniture();
         }
     }

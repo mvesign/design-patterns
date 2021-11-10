@@ -8,21 +8,30 @@ namespace DesignPatterns.AbstractFactory.Interfaces
     public interface IFurniture
     {
         /// <summary>
-        /// Get name of the furniture.
+        /// Get the style of the current furniture.
         /// </summary>
-        /// <returns>Furniture name.</returns>
-        string GetName();
+        /// <returns><see cref="FurnitureStyle"/></returns>
+        FurnitureStyle GetFurnitureStyle();
 
         /// <summary>
-        /// Whether the furniture has legs to stand on.
+        /// Get the type of the current furniture.
         /// </summary>
-        /// <returns>True when legs are present; Otherwise false.</returns>
-        bool HasLegs();
-        
-        /// <summary>
-        /// Whether the furniture is made to be sit on.
-        /// </summary>
-        /// <returns>True when it has a seat; Otherwise false.</returns>
-        bool CanSitOn();
+        /// <returns><see cref="FurnitureType"/></returns>
+        FurnitureType GetFurnitureType();
+    }
+
+    /// <inheritdoc />
+    public interface IChair : IFurniture
+    {
+    }
+
+    /// <inheritdoc />
+    public interface ICoffeeTable : IFurniture
+    {
+    }
+
+    /// <inheritdoc />
+    public interface ISofa : IFurniture
+    {
     }
 }

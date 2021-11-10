@@ -1,18 +1,23 @@
 ﻿namespace DesignPatterns.AbstractFactory.Models
 {
     /// <summary>
-    /// Type of furniture.
+    /// Possible types of a furniture
     /// </summary>
     public enum FurnitureType
     {
         /// <summary>
-        /// Modern.
+        /// Chair.
         /// </summary>
-        Modern,
+        Chair,
 
         /// <summary>
-        /// Victorian.
+        /// Coffee table
         /// </summary>
-        Victorian
+        CoffeeTable,
+
+        /// <summary>
+        /// Sofa
+        /// </summary>
+        Sofa
     }
 }

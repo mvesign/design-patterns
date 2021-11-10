@@ -10,15 +10,15 @@ namespace DesignPatterns.AbstractFactory.Services
     public static class FurnitureFactoryCreator
     {
         /// <summary>
-        /// Create a new <see cref="IFurnitureFactory"/> based on a given <see cref="FurnitureType"/>.
+        /// Create a new <see cref="IFurnitureFactory"/> based on a given <see cref="FurnitureStyle"/>.
         /// </summary>
-        /// <param name="type"><see cref="FurnitureType"/></param>
+        /// <param name="type"><see cref="FurnitureStyle"/></param>
         /// <returns><see cref="IFurnitureFactory"/></returns>
-        public static IFurnitureFactory CreateFurnitureFactory(this FurnitureType type) =>
+        public static IFurnitureFactory CreateFurnitureFactory(this FurnitureStyle type) =>
             type switch
             {
-                FurnitureType.Modern => new ModernFurnitureFactory(),
-                FurnitureType.Victorian => new VictorianFurnitureFactory(),
+                FurnitureStyle.Modern => new ModernFurnitureFactory(),
+                FurnitureStyle.Victorian => new VictorianFurnitureFactory(),
                 _ => throw new ArgumentOutOfRangeException(nameof(type), type, null)
             };
 
@@ -34,6 +34,6 @@ namespace DesignPatterns.AbstractFactory.Services
         }
         
         private static void ShowDetails(this IFurniture furniture) =>
-            Console.WriteLine($"{furniture.GetName()} - HasLegs: {furniture.HasLegs()}, CanSitOn: {furniture.CanSitOn()}");
+            Console.WriteLine($"{furniture.GetFurnitureStyle()} {furniture.GetFurnitureType()}");
     }
 }
