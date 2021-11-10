@@ -18,6 +18,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPatterns.Creational.F
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPatterns.Creational.Prototype", "DesignPatterns.Creational.Prototype\DesignPatterns.Creational.Prototype.csproj", "{CCD36D55-5ADD-44F5-82B2-C053ACEF9AC2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPatterns.Creational.Singleton", "DesignPatterns.Creational.Singleton\DesignPatterns.Creational.Singleton.csproj", "{E8822DDB-D0C1-4A36-AD0E-371CD4537C2B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -76,6 +78,18 @@ Global
 		{CCD36D55-5ADD-44F5-82B2-C053ACEF9AC2}.Release|x64.Build.0 = Release|Any CPU
 		{CCD36D55-5ADD-44F5-82B2-C053ACEF9AC2}.Release|x86.ActiveCfg = Release|Any CPU
 		{CCD36D55-5ADD-44F5-82B2-C053ACEF9AC2}.Release|x86.Build.0 = Release|Any CPU
+		{E8822DDB-D0C1-4A36-AD0E-371CD4537C2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8822DDB-D0C1-4A36-AD0E-371CD4537C2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8822DDB-D0C1-4A36-AD0E-371CD4537C2B}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{E8822DDB-D0C1-4A36-AD0E-371CD4537C2B}.Debug|x64.Build.0 = Debug|Any CPU
+		{E8822DDB-D0C1-4A36-AD0E-371CD4537C2B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E8822DDB-D0C1-4A36-AD0E-371CD4537C2B}.Debug|x86.Build.0 = Debug|Any CPU
+		{E8822DDB-D0C1-4A36-AD0E-371CD4537C2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8822DDB-D0C1-4A36-AD0E-371CD4537C2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8822DDB-D0C1-4A36-AD0E-371CD4537C2B}.Release|x64.ActiveCfg = Release|Any CPU
+		{E8822DDB-D0C1-4A36-AD0E-371CD4537C2B}.Release|x64.Build.0 = Release|Any CPU
+		{E8822DDB-D0C1-4A36-AD0E-371CD4537C2B}.Release|x86.ActiveCfg = Release|Any CPU
+		{E8822DDB-D0C1-4A36-AD0E-371CD4537C2B}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
