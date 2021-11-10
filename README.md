@@ -8,3 +8,4 @@ Creational design patterns are concerned with the way of creating objects. These
 
 * Abstract pattern
 * Builder
+* Factory Method
