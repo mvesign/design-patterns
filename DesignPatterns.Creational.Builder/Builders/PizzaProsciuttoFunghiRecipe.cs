@@ -1,17 +1,16 @@
 ﻿using DesignPatterns.Creational.Builder.Models;
 
-namespace DesignPatterns.Creational.Builder.Builders
+namespace DesignPatterns.Creational.Builder.Builders;
+
+/// <inheritdoc />
+public class PizzaProsciuttoFunghiRecipe : PizzaRecipe
 {
     /// <inheritdoc />
-    public class PizzaProsciuttoFunghiRecipe : AbstractPizzaRecipe
-    {
-        /// <inheritdoc />
-        public PizzaProsciuttoFunghiRecipe() : base("Prosciutto e Funghi") { }
+    public PizzaProsciuttoFunghiRecipe() : base("Prosciutto e Funghi") { }
 
-        /// <inheritdoc />
-        public override void AddSauce() => Pizza.Sauce = Sauce.Tomato;
+    /// <inheritdoc />
+    public override void AddSauce() => Pizza.Sauce = Sauce.Tomato;
 
-        /// <inheritdoc />
-        public override void AddIngredients() => Pizza.Ingredients = new[] { Ingredient.Mozzarella, Ingredient.Ham, Ingredient.Mushroom };
-    }
+    /// <inheritdoc />
+    public override void AddIngredients() => Pizza.Ingredients = new[] { Ingredient.Mozzarella, Ingredient.Ham, Ingredient.Mushroom };
 }

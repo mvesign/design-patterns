@@ -1,23 +1,22 @@
-﻿namespace DesignPatterns.Creational.AbstractFactory.Models
+﻿namespace DesignPatterns.Creational.AbstractFactory.Models;
+
+/// <summary>
+/// Possible types of a furniture
+/// </summary>
+public enum FurnitureType
 {
     /// <summary>
-    /// Possible types of a furniture
+    /// Chair.
     /// </summary>
-    public enum FurnitureType
-    {
-        /// <summary>
-        /// Chair.
-        /// </summary>
-        Chair,
+    Chair,
 
-        /// <summary>
-        /// Coffee table
-        /// </summary>
-        CoffeeTable,
+    /// <summary>
+    /// Coffee table
+    /// </summary>
+    CoffeeTable,
 
-        /// <summary>
-        /// Sofa
-        /// </summary>
-        Sofa
-    }
+    /// <summary>
+    /// Sofa
+    /// </summary>
+    Sofa
 }

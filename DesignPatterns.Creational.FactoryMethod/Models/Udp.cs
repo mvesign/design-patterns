@@ -1,12 +1,13 @@
-﻿using System;
-using DesignPatterns.Creational.FactoryMethod.Abstractions;
+﻿using DesignPatterns.Creational.FactoryMethod.Abstractions;
 
-namespace DesignPatterns.Creational.FactoryMethod.Models
+namespace DesignPatterns.Creational.FactoryMethod.Models;
+
+/// <inheritdoc />
+public class Udp : ITransport
 {
     /// <inheritdoc />
-    public class Udp : ITransport
+    public IEnumerable<string> SendPackage()
     {
-        /// <inheritdoc />
-        public void SendPackage() => Console.WriteLine($"{nameof(Udp).ToUpper()} - Send");
+        yield return $"{nameof(Udp).ToUpper()} - Send";
     }
 }

@@ -1,18 +1,17 @@
-﻿namespace DesignPatterns.Creational.AbstractFactory.Models
+﻿namespace DesignPatterns.Creational.AbstractFactory.Models;
+
+/// <summary>
+/// Type of furniture.
+/// </summary>
+public enum FurnitureStyle
 {
     /// <summary>
-    /// Type of furniture.
+    /// Modern.
     /// </summary>
-    public enum FurnitureStyle
-    {
-        /// <summary>
-        /// Modern.
-        /// </summary>
-        Modern,
+    Modern,
 
-        /// <summary>
-        /// Victorian.
-        /// </summary>
-        Victorian
-    }
+    /// <summary>
+    /// Victorian.
+    /// </summary>
+    Victorian
 }

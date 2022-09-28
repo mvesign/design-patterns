@@ -1,35 +1,26 @@
 ﻿using DesignPatterns.Structural.Adapter.Holes;
 using DesignPatterns.Structural.Adapter.Shapes;
 
-namespace DesignPatterns.Structural.Adapter
+const int radius = 10;
+const int width = 10;
+
+var roundHole = new RoundHole(radius);
+
+roundHole.Fits(new RoundPeg
 {
-    internal class Program
+    Radius = radius
+});
+roundHole.Fits(new SquarePegAdapter
+{
+    SquarePeg = new SquarePeg
     {
-        private const int Radius = 10;
-        private const int Width = 10;
-
-        private static void Main()
-        {
-            var roundHole = new RoundHole(Radius);
-
-            roundHole.Fits(new RoundPeg
-            {
-                Radius = Radius
-            });
-            roundHole.Fits(new SquarePegAdapter
-            {
-                SquarePeg = new SquarePeg
-                {
-                    Width = Width
-                }
-            });
-            roundHole.Fits(new SquarePegAdapter
-            {
-                SquarePeg = new SquarePeg
-                {
-                    Width = Width * 2
-                }
-            });
-        }
+        Width = width
     }
-}
+});
+roundHole.Fits(new SquarePegAdapter
+{
+    SquarePeg = new SquarePeg
+    {
+        Width = width * 2
+    }
+});

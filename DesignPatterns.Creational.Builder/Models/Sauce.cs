@@ -1,13 +1,12 @@
-﻿namespace DesignPatterns.Creational.Builder.Models
+﻿namespace DesignPatterns.Creational.Builder.Models;
+
+/// <summary>
+/// Set of possible sauces.
+/// </summary>
+public enum Sauce
 {
     /// <summary>
-    /// Set of possible sauces.
+    /// Tomato.
     /// </summary>
-    public enum Sauce
-    {
-        /// <summary>
-        /// Tomato.
-        /// </summary>
-        Tomato
-    }
+    Tomato
 }

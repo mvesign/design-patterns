@@ -1,48 +1,47 @@
-﻿namespace DesignPatterns.Creational.Builder.Models
+﻿namespace DesignPatterns.Creational.Builder.Models;
+
+/// <summary>
+/// Set of possible ingredients.
+/// </summary>
+public enum Ingredient
 {
     /// <summary>
-    /// Set of possible ingredients.
+    /// Basil.
     /// </summary>
-    public enum Ingredient
-    {
-        /// <summary>
-        /// Basil.
-        /// </summary>
-        Basil,
+    Basil,
 
-        /// <summary>
-        /// Mozzarella cheese.
-        /// </summary>
-        Mozzarella,
+    /// <summary>
+    /// Mozzarella cheese.
+    /// </summary>
+    Mozzarella,
 
-        /// <summary>
-        /// Ham.
-        /// </summary>
-        Ham,
+    /// <summary>
+    /// Ham.
+    /// </summary>
+    Ham,
 
-        /// <summary>
-        /// Mushroom.
-        /// </summary>
-        Mushroom,
+    /// <summary>
+    /// Mushroom.
+    /// </summary>
+    Mushroom,
 
-        /// <summary>
-        /// Pineapple.
-        /// </summary>
-        Pineapple,
+    /// <summary>
+    /// Pineapple.
+    /// </summary>
+    Pineapple,
 
-        /// <summary>
-        /// Salami.
-        /// </summary>
-        Salami,
+    /// <summary>
+    /// Salami.
+    /// </summary>
+    Salami,
 
-        /// <summary>
-        /// Tuna.
-        /// </summary>
-        Tuna,
+    /// <summary>
+    /// Tuna.
+    /// </summary>
+    Tuna,
 
-        /// <summary>
-        /// Union.
-        /// </summary>
-        Union
-    }
+    /// <summary>
+    /// Union.
+    /// </summary>
+    Union
 }

@@ -1,43 +1,33 @@
-﻿using System;
-using DesignPatterns.Creational.Prototype.Models;
+﻿using DesignPatterns.Creational.Prototype.Models;
 
-namespace DesignPatterns.Creational.Prototype
+Random random = new();
+
+var employee1 = new Employee
 {
-    internal class Program
-    {
-        private static readonly Random Random = new();
+    Identifier = random.Next(0, int.MaxValue),
+    Person = new Person("Hugo First", GetRandomBirthDate())
+};
 
-        private static void Main()
-        {
-            var employee1 = new Employee
-            {
-                Identifier = Random.Next(0, int.MaxValue),
-                Person = new Person("Hugo First", GetRandomBirthDate())
-            };
+var employee2 = employee1.ShallowCopy();
+var employee3 = employee1.DeepCopy();
 
-            var employee2 = employee1.ShallowCopy();
-            var employee3 = employee1.DeepCopy();
+Console.WriteLine($"Employee 1 - {employee1}");
+Console.WriteLine($"Employee 2 - {employee2}");
+Console.WriteLine($"Employee 3 - {employee3}");
 
-            Console.WriteLine($"Employee 1 - {employee1}");
-            Console.WriteLine($"Employee 2 - {employee2}");
-            Console.WriteLine($"Employee 3 - {employee3}");
+Console.WriteLine();
 
-            Console.WriteLine();
+employee1.Identifier = random.Next(0, int.MaxValue);
+employee1.Person.Name = "Aida Bug";
+employee1.Person.BirthDate = GetRandomBirthDate();
 
-            employee1.Identifier = Random.Next(0, int.MaxValue);
-            employee1.Person.Name = "Aida Bug";
-            employee1.Person.BirthDate = GetRandomBirthDate();
+Console.WriteLine($"Employee 1 - {employee1}");
+Console.WriteLine($"Employee 2 - {employee2}");
+Console.WriteLine($"Employee 3 - {employee3}");
 
-            Console.WriteLine($"Employee 1 - {employee1}");
-            Console.WriteLine($"Employee 2 - {employee2}");
-            Console.WriteLine($"Employee 3 - {employee3}");
-        }
-
-        private static DateTime GetRandomBirthDate() =>
-            new(
-                Random.Next(1970, DateTime.UtcNow.Year),
-                Random.Next(1, 12),
-                Random.Next(1, 28)
-            );
-    }
-}
+DateTime GetRandomBirthDate() =>
+    new(
+        random.Next(1970, DateTime.UtcNow.Year),
+        random.Next(1, 12),
+        random.Next(1, 28)
+    );

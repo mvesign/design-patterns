@@ -1,23 +1,15 @@
-﻿using System;
-using DesignPatterns.Creational.FactoryMethod.Abstractions;
+﻿using DesignPatterns.Creational.FactoryMethod.Abstractions;
 using DesignPatterns.Creational.FactoryMethod.Connectors;
 
-namespace DesignPatterns.Creational.FactoryMethod
-{
-    internal class Program
-    {
-        private static void Main()
-        {
-            SendPackageForConnector<TcpConnector>();
+SendPackageForConnector<TcpConnector>();
             
-            Console.WriteLine();
+Console.WriteLine();
 
-            SendPackageForConnector<UdpConnector>();
-        }
+SendPackageForConnector<UdpConnector>();
 
-        private static void SendPackageForConnector<TConnector>() where TConnector : IConnector, new() =>
-            new TConnector()
-                .CreateTransport()
-                .SendPackage();
-    }
-}
+static void SendPackageForConnector<TConnector>() where TConnector : IConnector, new() =>
+    new TConnector()
+        .CreateTransport()
+        .SendPackage()
+        .ToList()
+        .ForEach(Console.WriteLine);

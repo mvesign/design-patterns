@@ -1,16 +1,16 @@
-﻿namespace DesignPatterns.Structural.Adapter.Shapes
+﻿namespace DesignPatterns.Structural.Adapter.Shapes;
+
+/// <summary>
+/// Details of the square peg.
+/// </summary>
+public class SquarePeg
 {
     /// <summary>
-    /// Details of the square peg.
+    /// Width of the peg.
     /// </summary>
-    public class SquarePeg
-    {
-        /// <summary>
-        /// Width of the peg.
-        /// </summary>
-        public int Width { get; set; }
+    public int Width { get; set; }
 
-        /// <inheritdoc />
-        public override string ToString() => $"with width {Width}";
-    }
+    /// <inheritdoc />
+    public override string ToString() =>
+        $"with width {Width}";
 }
