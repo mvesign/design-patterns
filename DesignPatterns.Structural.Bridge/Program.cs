@@ -1,12 +1,12 @@
-﻿using System;
+﻿using DesignPatterns.Structural.Bridge.Images;
+using DesignPatterns.Structural.Bridge.OperatingSystems;
 
-namespace DesignPatterns.Structural.Bridge
-{
-    internal class Program
-    {
-        private static void Main()
-        {
-            Console.WriteLine("Hello World!");
-        }
-    }
-}
+new ConcreteImage(new Linux()).CheckImage();
+
+Console.WriteLine();
+
+new ConcreteImage(new MacOS()).CheckImage();
+
+Console.WriteLine();
+
+new ConcreteImage(new Windows()).CheckImage();
