@@ -1,4 +1,6 @@
-﻿namespace DesignPatterns.Structural.Decorator.Decorators;
+﻿using DesignPatterns.Structural.Decorator.Shapes;
+
+namespace DesignPatterns.Structural.Decorator.Decorators;
 
 /// <inheritdoc />
 /// <summary>

@@ -1,4 +1,4 @@
-﻿namespace DesignPatterns.Structural.Decorator;
+﻿namespace DesignPatterns.Structural.Decorator.Shapes;
 
 /// <summary>
 /// Shape.
