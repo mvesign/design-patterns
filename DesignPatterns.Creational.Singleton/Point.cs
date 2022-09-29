@@ -1,29 +1,29 @@
 ﻿namespace DesignPatterns.Creational.Singleton;
 
 /// <summary>
-/// The one and only sun.
+/// The one and only point I can make here.
 /// </summary>
-public class Sun
+public class Point
 {
     /// <summary>
     /// Private constructor to force the single instance
     /// </summary>
-    private Sun()
+    private Point()
     {
         Identifier = new Random().Next();
     }
 
     /// <summary>
-    /// Get the one and only instance of the sun.
+    /// Get the one and only instance of the point.
     /// </summary>
-    public static Sun Instance { get; } = new();
+    public static Point Instance { get; } = new();
 
     /// <summary>
-    /// Identifier of the sun.
+    /// Identifier of the point.
     /// </summary>
     public int Identifier { get; }
 
     /// <inheritdoc />
     public override string ToString() =>
-        $"Sun #{Identifier}";
+        $"Point #{Identifier}";
 }
