@@ -1,20 +1,16 @@
 ﻿using DesignPatterns.Structural.Composite;
 
-var flWheel = new OrderItem("Front-left wheel", 10);
-var frWheel = new OrderItem("Front-right wheel", 10);
-var blWheel = new OrderItem("Back-left wheel", 10);
-var brWheel = new OrderItem("Back-right wheel", 10);
+var sphere = new Dimension("Sphere");
+var cylinder = new Dimension("Cylinder");
+var cube = new Dimension("Cube");
+var circle = new Dimension("Circle");
+var square = new Dimension("Square");
+var line = new Dimension("Line");
+var point = new Dimension("Point");
 
-var leftDoor = new OrderItem("Left door", 30);
-var rightDoor = new OrderItem("Right door", 30);
+point.Add(line);
+line.Add(circle, square);
+circle.Add(sphere, cylinder);
+square.Add(cube);
 
-var frame = new OrderItem("Frame", 100);
-var engine = new OrderItem("Engine", 100);
-var steeringWheel = new OrderItem("Steering wheel", 50);
-
-var car = new OrderItem("Car");
-
-car.Add(frame, engine, steeringWheel);
-frame.Add(flWheel, frWheel, blWheel, brWheel, leftDoor, rightDoor);
-
-car.PrintReceipt();
+point.Draw();
