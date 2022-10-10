@@ -17,3 +17,13 @@ Factory Method is a creational design pattern that provides an interface for cre
 ## Cons
 
 * Increase complexity of the code due to introduction of a lot of subclasses to implement the pattern.
+
+## Output
+
+```
+TCP - Send SYN
+TCP - SYN received
+TCP - Send ACK
+
+UDP - Send
+```

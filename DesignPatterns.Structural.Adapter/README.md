@@ -15,3 +15,16 @@ Adapter is a structural design pattern that allows objects with incompatible int
 ## Cons
 
 - Overall complexity increases due to introduction of new interfaces and classes. Can be simpler to change service class to match rest of the code.
+
+## Output
+
+```
+Peg with radius 10.
+But does it fit in hole with radius 10? Yes!
+
+Peg with width 10 and with radius 7.
+But does it fit in hole with radius 10? Yes!
+
+Peg with width 20 and with radius 14.
+But does it fit in hole with radius 10? No!
+```

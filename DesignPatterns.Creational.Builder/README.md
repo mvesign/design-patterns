@@ -17,3 +17,13 @@ Builder is a creational design pattern that lets you construct complex objects s
 ## Cons
 
 * Increase complexity of the code due to introduction of multiple classes to implement the pattern.
+
+## Output
+
+```
+Pizza Hawai with Tomato sauce and the toppings Mozzarella, Ham, Pineapple
+Pizza Margherita with Tomato sauce and the toppings Mozzarella, Basil
+Pizza Pepperoni with Tomato sauce and the toppings Mozzarella, Salami
+Pizza Prosciutto e Funghi with Tomato sauce and the toppings Mozzarella, Ham, Mushroom
+Pizza Tonno with Tomato sauce and the toppings Mozzarella, Tuna, Union
+```

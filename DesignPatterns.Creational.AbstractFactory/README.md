@@ -16,3 +16,14 @@ Abstract Factory is a creational design pattern that lets you produce families o
 ## Cons
 
 * Increase complexity of the code due to introduction of a lot of interfaces and classes to implement the pattern.
+
+## Output
+
+```
+Modern Chair
+Modern CoffeeTable
+Modern Sofa
+Victorian Chair
+Victorian CoffeeTable
+Victorian Sofa
+```

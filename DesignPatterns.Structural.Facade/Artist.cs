@@ -16,6 +16,7 @@ public class Artist
     /// </summary>
     public void Draw()
     {
+        Console.WriteLine("Artist starts to draw");
         _circle.Draw();
         _square.Draw();
         _triangle.Draw();

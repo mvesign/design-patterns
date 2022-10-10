@@ -19,3 +19,19 @@ Decorator is a structural design pattern that lets you attach new behaviors to o
 * It’s hard to remove a specific wrapper from the wrappers stack.
 * It’s hard to implement a decorator in such a way that its behavior doesn’t depend on the order in the decorators stack.
 * The initial configuration code of layers might look pretty ugly.
+
+## Output
+
+'''
+Shape: Circle
+
+Shape: Circle
+Color: Red
+
+Shape: Rectangle
+Color: Red
+
+Shape: Rectangle
+Color: Red
+Border: Blue
+'''

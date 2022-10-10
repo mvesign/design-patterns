@@ -14,3 +14,12 @@ Facade is a structural design pattern that provides a simplified interface to a 
 ## Cons
 
 * Can become a "god" object coupled to all classes within an application.
+
+## Output
+
+```
+Artist starts to draw
+Draw Circle
+Draw Square
+Draw Triangle
+```

@@ -16,3 +16,19 @@ Bridge is a structural design pattern that lets you split a large class or a set
 ## Cons
 
 * Overall complexity increases due to introduction of new interfaces and classes. Can be simpler to change service class to match rest of the code.
+
+## Output
+
+```
+Linux is started up
+Display Linux screen
+Linux is shut down
+
+MacOS is started up
+Display MacOS screen
+MacOS is shut down
+
+Windows is started up
+Display Windows screen
+Windows is shut down
+```

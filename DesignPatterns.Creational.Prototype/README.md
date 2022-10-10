@@ -18,3 +18,15 @@ Prototype is a creational design pattern that lets you copy existing objects wit
 ## Cons
 
 * Cloning complex objects that have circular references might be very tricky.
+
+## Output
+
+```
+Employee 1 - #649314947 - Name: Hugo First, Age: 26, BirthDate: 95-11-18
+Employee 2 - #649314947 - Name: Hugo First, Age: 26, BirthDate: 95-11-18
+Employee 3 - #649314947 - Name: Hugo First, Age: 26, BirthDate: 95-11-18
+
+Employee 1 - #1433700273 - Name: Aida Bug, Age: 16, BirthDate: 06-09-09
+Employee 2 - #649314947 - Name: Aida Bug, Age: 16, BirthDate: 06-09-09
+Employee 3 - #649314947 - Name: Hugo First, Age: 26, BirthDate: 95-11-18
+```

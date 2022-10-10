@@ -20,3 +20,13 @@ Singleton is a creational design pattern that lets you ensure that a class has o
 * Requires special treatment in a multithreaded environment so that multiple threads won’t create a singleton object several times.
 * May be difficult to unit test client code with this instance because many test frameworks rely on inheritance when producing mock objects.
   * The constructor is private and overriding static methods is hard or impossible, requiring a creative way to mock the singleton.
+
+## Output
+
+```
+Point #195794751
+Point #195794751
+Point #195794751
+Point #195794751
+Point #195794751
+```

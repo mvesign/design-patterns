@@ -15,3 +15,15 @@ Composite is a structural design pattern that lets you compose objects into tree
 ## Cons
 
 * It might be difficult to provide a common interface for classes whose functionality differs too much. Overgeneralize can occur, which makes it harder to comprehend.
+
+## Output
+
+```
+0 - Point
+ 1 - Line
+  2 - Circle
+   3 - Sphere
+   3 - Cylinder
+  2 - Square
+   3 - Cube
+```
