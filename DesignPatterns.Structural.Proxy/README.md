@@ -14,8 +14,8 @@ Proxy is a structural design pattern that provides a substitute or placeholder f
 ## Pros
 
 * Possible to control the service object without clients knowing about it.
-* Possible to manage the lifecycle of the service object when clients don’t care about it.
-* The proxy works even if the service object isn’t ready or is not available.
+* Possible to manage the lifecycle of the service object when clients donâ€™t care about it.
+* The proxy works even if the service object isnâ€™t ready or is not available.
 * Open/Closed Principle. Introduction of new proxies without changing the service or clients.
 
 ## Cons
