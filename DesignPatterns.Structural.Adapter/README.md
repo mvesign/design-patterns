@@ -4,8 +4,8 @@ Adapter is a structural design pattern that allows objects with incompatible int
 
 ## When to use
 
-- When it's desired to use an existing class, but its interface isn’t compatible with the rest of the code.
-- When it's desired to reuse several existing subclasses that lack common functionality that can’t be added to the superclass.
+- When it's desired to use an existing class, but its interface isnâ€™t compatible with the rest of the code.
+- When it's desired to reuse several existing subclasses that lack common functionality that canâ€™t be added to the superclass.
 
 ## Pros
 

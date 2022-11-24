@@ -4,7 +4,7 @@ Builder is a creational design pattern that lets you construct complex objects s
 
 ## When to use
 
-* To get ride of a ìtelescopic constructorî (e.g. a constructor with a lot of parameters with most of them as optional).
+* To get ride of a ‚Äútelescopic constructor‚Äù (e.g. a constructor with a lot of parameters with most of them as optional).
 * When different representations of the same type needs to be created during run time.
 * when construction of composite trees or other complex objects is desired.
 

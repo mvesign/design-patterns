@@ -4,7 +4,7 @@ Prototype is a creational design pattern that lets you copy existing objects wit
 
 ## When to use
 
-* When code shouldn’t depend on the concrete classes of objects that needs to be copied.
+* When code shouldnâ€™t depend on the concrete classes of objects that needs to be copied.
 * When reducing the number of subclasses, that only differ in the way they initialize their respective objects, is desired.
 ** Subclasses could have been created in order to create objects with a specific configuration.
 
