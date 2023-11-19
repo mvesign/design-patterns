@@ -1,20 +1,40 @@
-﻿using DesignPatterns.Structural.Flyweight;
+﻿using System;
+using System.Drawing;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 
-var colors = new[]
-{
-    "Red",
-    "Green",
-    "Blue"
-};
+namespace DesignPatterns.Structural.Flyweight;
 
-foreach (var color in colors)
+public static class Program
 {
-    Console.WriteLine($"{color} circles");
-    for (var i = 0; i < 3; i++)
+    private static void Main(string[] args)
     {
-        var circle = ShapeFactory.GetShape(ShapeType.Circle);
-        circle.SetColor(color);
-        circle.Draw();
+        var regularTrees = new []
+        {
+            new Regular.Tree(Color.Brown, Color.Green, 100, 10),
+            new Regular.Tree(Color.Brown, Color.Green, 150, 15),
+            new Regular.Tree(Color.Brown, Color.Green, 200, 20),
+            new Regular.Tree(Color.Brown, Color.Green, 250, 25)
+        };
+        Console.WriteLine($"Trees without pattern: {regularTrees.TreesToByteArray().Length}");
+
+        var baseTree = new Pattern.BaseTree(Color.Brown, Color.Green);
+        var patternTrees = new []
+        {
+            new Pattern.Tree(baseTree, 100, 10),
+            new Pattern.Tree(baseTree, 150, 15),
+            new Pattern.Tree(baseTree, 200, 20),
+            new Pattern.Tree(baseTree, 250, 15)
+        };
+        Console.WriteLine($"Trees with pattern: {patternTrees.TreesToByteArray().Length}");
     }
-    Console.WriteLine();
+
+    public static byte[] TreesToByteArray(this ITree[] trees)
+    {
+        var binaryFormatter = new BinaryFormatter();
+        using var memoryStream = new MemoryStream();
+
+        binaryFormatter.Serialize(memoryStream, trees);
+        return memoryStream.ToArray();
+    }
 }
