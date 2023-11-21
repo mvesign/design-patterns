@@ -13,13 +13,13 @@ public static class Program
         var regularTrees = Enumerable.Range(1, 1000)
             .Select(_ => new Regular.OakTree(Color.Brown, Color.Green, 100, 10))
             .ToArray();
-        Console.WriteLine($"Trees without pattern: {regularTrees.TreesToByteArray().Length}");
+        Console.WriteLine($"Byte size of trees without pattern: {regularTrees.TreesToByteArray().Length}");
 
         var tree = new Pattern.Tree(Color.Brown, Color.Green);
         var patternTrees = Enumerable.Range(1, 1000)
             .Select(_ => new Pattern.OakTree(tree, 100, 10))
             .ToArray();
-        Console.WriteLine($"Trees with pattern: {patternTrees.TreesToByteArray().Length}");
+        Console.WriteLine($"Byte size of trees with pattern: {patternTrees.TreesToByteArray().Length}");
     }
 
     public static byte[] TreesToByteArray(this object[] trees)

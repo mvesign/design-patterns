@@ -69,7 +69,9 @@ public class OakTree
 
 ### Cool, and does this work?
 
-Yes and no. It will work and run, but not when the number of `PatternOakTree` objects is on the low side. Let me demonstrate it by wrapping it up in a small `Program` class.
+Yes and no. It will work and run as expected and lowers the memory size, but is it worth the extra complexity we have added when the number of `PatternOakTree` objects is on the low side?
+
+Let's figure that out by wrapping it up in a small `Program` class.
 
 ```csharp
 public static class Program
@@ -103,23 +105,21 @@ public static class Program
 }
 ```
 
-This small program will first create an array of 5 `RegularOakTree` objects, calculate the size of these objects by converting it into a byte array and prints it out to the console. Than the same will be done, but than for 5 `PatternOakTree` objects. The console will show us.
+This small program will first create an array of 5 `RegularOakTree` objects, calculates the size of these objects by converting it into a byte array and prints it out to the console. The same will be done for 5 `PatternOakTree` objects. Giving us the output in the console.
 
 ```
-Trees without pattern: 911
-Trees with pattern: 882
+Byte size of trees without pattern: 911
+Byte size of trees with pattern: 882
 ```
 
-Although the size of the `PatternOakTree` objects is lower, it's not really a big difference. So you need to think if this is worth the extra complexity?
+The size of the `PatternOakTree` objects are lower, but the difference is not worth the extra complexity we have added with the Flyweight design pattern.
 
-But the fun really begins when we change the `Enumerable.Range(1, 5)` to `Enumerable.Range(1, 1000)` in order to create 1000 objects of each oak tree. This will give us the following output in the console.
+So when is the extra complexity worth it? That depends on the duplicating properties. In this case the fun really begins when we change the `Enumerable.Range(1, 5)` to `Enumerable.Range(1, 1000)`. Creating 1000 objects of each type of oak tree. Giving us the following output in the console.
 
 ```
-Trees without pattern: 74541
-Trees with pattern: 35707
+Byte size of trees without pattern: 74541
+Byte size of treese with pattern: 35707
 ```
-
-Now the true effect of the Flyweight design pattern is visible. The size of objects has been halved.
 
 ### Something more about the Flyweight design pattern?
 
