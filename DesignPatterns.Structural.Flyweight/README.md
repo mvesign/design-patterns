@@ -108,6 +108,7 @@ public static class Program
 This small program will first create an array of 5 `RegularOakTree` objects, calculates the size of these objects by converting it into a byte array and prints it out to the console. The same will be done for 5 `PatternOakTree` objects. Giving us the output in the console.
 
 > Byte size of trees without pattern: 911
+> 
 > Byte size of trees with pattern: 882
 
 The size of the `PatternOakTree` objects are lower, but the difference is not worth the extra complexity we have added with the Flyweight design pattern.
@@ -115,6 +116,7 @@ The size of the `PatternOakTree` objects are lower, but the difference is not wo
 So when is the extra complexity worth it? That depends on the duplicating properties. In this case the fun really begins when we change the `Enumerable.Range(1, 5)` to `Enumerable.Range(1, 1000)`. Creating 1000 objects of each type of oak tree. Giving us the following output in the console.
 
 > Byte size of trees without pattern: 74541
+> 
 > Byte size of treese with pattern: 35707
 
 ### Something more about the Flyweight design pattern?
