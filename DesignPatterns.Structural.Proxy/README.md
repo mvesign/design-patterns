@@ -82,13 +82,11 @@ proxyService.GetLargeNonVolatileCollection();
 
 Now we can build and run this piece of code, which will write some logging to the console.
 
-```
-Attempt #1
-Get large non-volatile collection via Proxy service
-Initialize database service.
-Setup large non-volatile collection in local cache.
-Attempt #2
-Get large non-volatile collection via Proxy service
-```
+> Attempt #1
+> Get large non-volatile collection via Proxy service
+> Initialize database service.
+> Setup large non-volatile collection in local cache.
+> Attempt #2
+> Get large non-volatile collection via Proxy service
 
 And there you have it. A small project containing the Proxy design pattern.
