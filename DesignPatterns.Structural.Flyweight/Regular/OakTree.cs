@@ -1,10 +1,12 @@
+using System;
 using System.Drawing;
 
 namespace DesignPatterns.Structural.Flyweight.Regular;
 
-public class Tree : ITree
+[Serializable]
+public class OakTree
 {
-    public Tree(Color bark, Color leaves, long height, long thickness)
+    public OakTree(Color bark, Color leaves, long height, long thickness)
     {
         Bark = bark;
         Leaves = leaves;

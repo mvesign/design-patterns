@@ -12,9 +12,116 @@ But only when the reason of the memory exhaustion is due to the large amount of 
 
 ### How does a Flyweight design pattern look like?
 
+Before we are going to have a look at the Flyweight design pattern implementation, let's have a look how a regular class with possible duplicate properties can look like. For this example I'm using a tree object in a game design.
 
+```csharp
+public class RegularOakTree
+{
+    public RegularOakTree(Color bark, Color leaves, long height, long thickness)
+    {
+        Bark = bark;
+        Leaves = leaves;
+        Height = height;
+        Thickness = thickness;
+    }
 
-### Something note worthy about Flyweight design pattern?
+    public long Height { get; init; }
+
+    public long Thickness { get; init; }
+
+    public Color Bark { get; init; }
+
+    public Color Leaves { get; init; }
+}
+```
+
+In this example we have an oak tree, where for each oak the height and thickness can vary depening of the age of the oak. But the properties defining the color of the bark or leaves will always be the same for any type of tree.
+
+In order to reduce the memory of this game, we can implement the Flyweight design pattern by moving these properties to a predefined `Tree` class. And use this object in our `OakTree` class. So let's define the `Tree` class.
+
+```csharp
+public record Tree(Color Bark, Color Leaves);
+```
+
+An instance of this class must be given to our `OakTree` class, and used as the output for the existing `Bark` and `Leaves` properties like so.
+
+```csharp
+public class OakTree
+{
+    private readonly Tree _baseTree;
+
+    public PatternOakTree(Tree baseTree, long height, long thickness)
+    {
+        _baseTree = baseTree;
+        Height = height;
+        Thickness = thickness;
+    }
+
+    public long Height { get; init; }
+
+    public long Thickness { get; init; }
+
+    public Color Bark => _baseTree.Bark;
+
+    public Color Leaves => _baseTree.Leaves;
+}
+```
+
+### Cool, and does this work?
+
+Yes and no. It will work and run, but not when the number of `PatternOakTree` objects is on the low side. Let me demonstrate it by wrapping it up in a small `Program` class.
+
+```csharp
+public static class Program
+{
+    private static void Main(string[] args)
+    {
+        var regularTrees = Enumerable.Range(1, 5)
+            .Select(_ => new RegularOakTree(Color.Brown, Color.Green, 100, 10))
+            .ToArray();
+        Console.WriteLine($"Trees without pattern: {regularTrees.TreesToByteArray().Length}");
+
+        var tree = new Pattern.Tree(Color.Brown, Color.Green);
+        var patternTrees = Enumerable.Range(1, 5)
+            .Select(_ => new PatternOakTree(tree, 100, 10))
+            .ToArray();
+        Console.WriteLine($"Trees with pattern: {patternTrees.TreesToByteArray().Length}");
+    }
+
+    public static byte[] TreesToByteArray(this object[] trees)
+    {
+        // Yes, I know. The BinaryFormatter is not safe and should not be used.
+        // But this is just to show the power of the Flyweight design pattern, so quit whining.
+        #pragma warning disable SYSLIB0011
+        var binaryFormatter = new BinaryFormatter();
+        using var memoryStream = new MemoryStream();
+
+        binaryFormatter.Serialize(memoryStream, trees);
+        return memoryStream.ToArray();
+        #pragma warning restore SYSLIB0011
+    }
+}
+```
+
+This small program will first create an array of 5 `RegularOakTree` objects, calculate the size of these objects by converting it into a byte array and prints it out to the console. Than the same will be done, but than for 5 `PatternOakTree` objects. The console will show us.
+
+```
+Trees without pattern: 911
+Trees with pattern: 882
+```
+
+Although the size of the `PatternOakTree` objects is lower, it's not really a big difference. So you need to think if this is worth the extra complexity?
+
+But the fun really begins when we change the `Enumerable.Range(1, 5)` to `Enumerable.Range(1, 1000)` in order to create 1000 objects of each oak tree. This will give us the following output in the console.
+
+```
+Trees without pattern: 74541
+Trees with pattern: 35707
+```
+
+Now the true effect of the Flyweight design pattern is visible. The size of objects has been halved.
+
+### Something more about the Flyweight design pattern?
 
 Yes. When creating a multi-threaded application in combination with the Flyweight design pattern, there are two options possible.
 
@@ -24,7 +131,5 @@ Yes. When creating a multi-threaded application in combination with the Flyweigh
 To ensure safe sharing between threads, Flyweight objects can be made into immutable value objects. C# 9 introduced a new type which can help with this called [Records](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/record).
 
 ```csharp
-public record 
+public record BaseTree(Color Bark, Color Leaves);
 ```
-
-
