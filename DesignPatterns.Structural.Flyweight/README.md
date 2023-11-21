@@ -128,7 +128,7 @@ Yes. When creating a multi-threaded application in combination with the Flyweigh
 1. Make flyweight instantiation single-threaded. Which introduces contention and ensures one instance per value.
 2. Allow concurrent threads to create multiple flyweight instances. Which eliminates contention and allows multiple instances per value.
 
-To ensure safe sharing between threads, Flyweight objects can be made into immutable value objects. C# 9 introduced a new type which can help with this called [Records](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/record).
+To ensure safe sharing between threads, Flyweight objects can be made into immutable value objects. C# 9 introduced a new type which can help with this, called `Records`.
 
 ```csharp
 public record BaseTree(Color Bark, Color Leaves);
